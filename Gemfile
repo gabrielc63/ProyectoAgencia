@@ -10,6 +10,8 @@ gem 'sass-rails', '~> 4.0.3'
 
 gem 'bootstrap-sass', '~> 3.1.1'
 
+gem "font-awesome-rails"
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -30,7 +32,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use unicorn as the app server
 # gem 'unicorn'
@@ -53,7 +55,6 @@ group :development, :test do
 end
 
 group :test do
-  gem 'selenium-webdriver', '2.35.1'
   gem 'capybara', '2.2.1'
   gem 'factory_girl_rails', '4.4.1'
   gem 'database_cleaner', github: 'bmabey/database_cleaner'
