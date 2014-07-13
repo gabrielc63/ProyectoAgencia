@@ -1,9 +1,10 @@
+<% provide(:title, 'Registro') %>
 <h1>Registrarse</h1>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= form_for @agencia, :url => agencias_path do |f| %>
-      <%#= render 'shared/error_messages', object: f.object %>
+      <%= render 'shared/error_messages', object: f.object %>
 
       <div class="form-group">
         <%= f.label :titular %>

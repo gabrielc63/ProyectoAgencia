@@ -13,6 +13,10 @@ class AgenciasController < ApplicationController
     end
   end
 
+  def show
+    @agencia = Agencia.find(params[:id])
+  end
+
   private
 
     def agencia_params

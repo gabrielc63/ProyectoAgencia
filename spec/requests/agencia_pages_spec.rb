@@ -24,7 +24,7 @@ describe "Paginas de Agencia" do
       describe "despues de enviar" do
         before { click_button submit }
 
-        it { should have_title('Registrarse') }
+        it { should have_title('Registro') }
         it { should have_content('error') }
       end
 
@@ -50,7 +50,10 @@ describe "Paginas de Agencia" do
         before { click_button submit }
         let(:agencia) { Agencia.find_by(email: 'juancho@gmail.com') }
 
-        it { should have_title(agencia.numero_agencia) }
+        it { should have_selector('h1', text: agencia.numero_agencia) }
+        it { should have_content( agencia.titular) }
+        it { should have_content(agencia.telefono) }
+        it { should have_content( agencia.domicilio) }
         it { should have_link('Salir') }
         it { should have_selector('div.alert.alert-success', text: 'Bienvenido') }
       end
