@@ -1,0 +1,26 @@
+<% provide(:title, "Iniciar Sesion") %>
+
+<%= render 'shared/navbar' %>
+
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <h1>Iniciar Sesion</h1>
+    <%= form_tag(sessions_path) do %>
+
+      <div class="form-group">
+        <%= label_tag :email %>
+        <%= text_field_tag :email, nil, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= label_tag :password %>
+        <%= password_field_tag :password, nil, class: "form-control" %>
+      </div>
+
+      <%= submit_tag "Iniciar Sesion", class: "btn btn-default btn-lg btn-primary" %>
+    <% end %>
+
+    <p>Nuevo usuario? <%= link_to "Registrate ahora!", registro_path %></p>
+  </div>
+</div>

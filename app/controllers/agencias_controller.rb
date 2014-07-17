@@ -6,6 +6,7 @@ class AgenciasController < ApplicationController
   def create
     @agencia = Agencia.new(agencia_params)
     if @agencia.save
+      sign_in @agencia
       flash[:success] = "Bienvenido"
       redirect_to @agencia
     else
@@ -14,6 +15,10 @@ class AgenciasController < ApplicationController
   end
 
   def show
+    @agencia = Agencia.find(params[:id])
+  end
+
+  def edit
     @agencia = Agencia.find(params[:id])
   end
 
