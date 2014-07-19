@@ -1,4 +1,8 @@
 class AgenciasController < ApplicationController
+  def home
+
+  end
+
   def new
     @agencia = Agencia.new
   end

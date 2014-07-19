@@ -6,62 +6,10 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Proyecto Agencia</a>
+        <%= link_to "Proyecto Agencia", home_path, class: "navbar-brand" %>
     </div>
     <!-- /.navbar-header -->
         <ul class="nav navbar-top-links navbar-right">
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                    <i class="fa fa-envelope fa-fw"></i>  <i class="fa fa-caret-down"></i>
-                </a>
-                <ul class="dropdown-menu dropdown-messages">
-                    <li>
-                        <a href="#">
-                            <div>
-                                <strong>John Smith</strong>
-                                <span class="pull-right text-muted">
-                                    <em>Yesterday</em>
-                                </span>
-                            </div>
-                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a href="#">
-                            <div>
-                                <strong>John Smith</strong>
-                                <span class="pull-right text-muted">
-                                    <em>Yesterday</em>
-                                </span>
-                            </div>
-                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a href="#">
-                            <div>
-                                <strong>John Smith</strong>
-                                <span class="pull-right text-muted">
-                                    <em>Yesterday</em>
-                                </span>
-                            </div>
-                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a class="text-center" href="#">
-                            <strong>Read All Messages</strong>
-                            <i class="fa fa-angle-right"></i>
-                        </a>
-                    </li>
-                </ul>
-                <!-- /.dropdown-messages -->
-            </li>
-            <!-- /.dropdown -->
-
             <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                     <i class="fa fa-bell fa-fw"></i>  <i class="fa fa-caret-down"></i>
@@ -70,7 +18,18 @@
                     <li>
                         <a href="#">
                             <div>
-                                <i class="fa fa-comment fa-fw"></i> New Comment
+                                <i class="fa fa-comment fa-fw"></i> Nueva alerta
+                                <span class="pull-right text-muted small">4 minutes ago</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <i class="fa fa-envelope fa-fw"></i> Nueva version
                                 <span class="pull-right text-muted small">4 minutes ago</span>
                             </div>
                         </a>
@@ -79,16 +38,7 @@
                     <li>
                         <a href="#">
                             <div>
-                                <i class="fa fa-twitter fa-fw"></i> 3 New Followers
-                                <span class="pull-right text-muted small">12 minutes ago</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a href="#">
-                            <div>
-                                <i class="fa fa-envelope fa-fw"></i> Message Sent
+                                <i class="fa fa-tasks fa-fw"></i> Nuevo vencimiento
                                 <span class="pull-right text-muted small">4 minutes ago</span>
                             </div>
                         </a>
@@ -97,16 +47,7 @@
                     <li>
                         <a href="#">
                             <div>
-                                <i class="fa fa-tasks fa-fw"></i> New Task
-                                <span class="pull-right text-muted small">4 minutes ago</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a href="#">
-                            <div>
-                                <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                <i class="fa fa-upload fa-fw"></i> Nueva alerta
                                 <span class="pull-right text-muted small">4 minutes ago</span>
                             </div>
                         </a>
@@ -114,7 +55,7 @@
                     <li class="divider"></li>
                     <li>
                         <a class="text-center" href="#">
-                            <strong>See All Alerts</strong>
+                            <strong>Ver todas las alertas</strong>
                             <i class="fa fa-angle-right"></i>
                         </a>
                     </li>
@@ -165,11 +106,11 @@
                         <!-- /input-group -->
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>
+                        <a><i class="fa fa-bar-chart-o fa-fw"></i>
                          Contabilidad diaria </a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-edit fa-fw"></i>
+                        <a href=""><i class="fa fa-edit fa-fw"></i>
                         Juegos Preimpresos<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
@@ -182,11 +123,11 @@
                         <!-- /.nav-second-level -->
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-sitemap fa-fw"></i>
+                        <a href=""><i class="fa fa-sitemap fa-fw"></i>
                          Subagencias<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="#">Consultar</a>
+                                <%= link_to "Listado", subagencias_path %>
                             </li>
                             <li>
                                 <%= link_to "Agregar", new_subagencia_path %>

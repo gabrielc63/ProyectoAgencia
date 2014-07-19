@@ -2,8 +2,9 @@ require 'rails_helper'
 
 RSpec.describe Subagencia, :type => :model do
 
+  let(:agencia) { FactoryGirl.create(:agencia) }
   before do
-    @sub_agencia = Subagencia.new(titular: "Javier Pastore", numero_subagencia: "45", email: "javier@gmail", domicilio: "Espania 679", telefono: "345533")
+    @sub_agencia = agencia.subagencias.build(titular: "Javier Pastore", numero_subagencia: "45", email: "javier@gmail", domicilio: "Espania 679", telefono: "345533")
   end
 
   subject { @sub_agencia }
@@ -13,6 +14,8 @@ RSpec.describe Subagencia, :type => :model do
   it { should respond_to(:email) }
   it { should respond_to(:domicilio) }
   it { should respond_to(:telefono) }
+  it { should respond_to(:agencia) }
+  its(:agencia) { should eq agencia}
 
   it { should be_valid }
 

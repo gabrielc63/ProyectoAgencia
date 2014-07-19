@@ -45,6 +45,7 @@ group :development, :test do
   gem 'guard-livereload'
   gem 'guard-rspec'
   gem 'rspec-rails'
+  gem 'rspec-its'
   gem 'shoulda-matchers'
   gem 'jazz_hands', '~> 0.5.2'
   gem 'better_errors'

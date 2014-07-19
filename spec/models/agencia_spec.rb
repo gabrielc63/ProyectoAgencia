@@ -23,6 +23,7 @@ describe Agencia do
   it { should respond_to(:domicilio) }
   it { should respond_to(:telefono) }
   it { should respond_to(:localidad) }
+  it { should respond_to(:subagencias) }
 
   it { should be_valid }
 
