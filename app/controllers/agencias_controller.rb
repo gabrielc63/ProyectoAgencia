@@ -28,9 +28,9 @@ class AgenciasController < ApplicationController
 
   private
 
-    def agencia_params
-      params.require(:agencia).permit(:titular, :numero_agencia, :email, :telefono,
-                                      :domicilio, :localidad, :password,
-                                      :password_confirmation)
-    end
+  def agencia_params
+    params.require(:agencia).permit(:titular, :numero_agencia, :email, :telefono,
+                                    :domicilio, :localidad, :password,
+                                    :password_confirmation)
+  end
 end

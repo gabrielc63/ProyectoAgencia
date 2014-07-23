@@ -1,24 +1,23 @@
 <% provide(:title, "Agencia #{@agencia.numero_agencia}") %>
-
 <div id="wrapper">
-
-    <%= render 'navigation' %>
-
-    <div id="page-wrapper">
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">
-                Agencia
-                <%= @agencia.numero_agencia %>
-                </h1>
-
-                <p>Titular: <%= @agencia.titular %></p>
-                <p>Telefono: <%= @agencia.telefono %></p>
-                <p>Domicilio: <%= @agencia.domicilio %></p>
-            </div>
-            <!-- /.col-lg-12 -->
-        </div>
-        <!-- /.row -->
+  <%= render 'navigation' %>
+  <div id="page-wrapper">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="page-header">
+          Agencia
+          <%= @agencia.numero_agencia %>
+        </h1>
+        <p>Titular:
+          <%= @agencia.titular %></p>
+        <p>Telefono:
+          <%= @agencia.telefono %></p>
+        <p>Domicilio:
+          <%= @agencia.domicilio %></p>
+      </div>
+      <!-- /.col-lg-12 -->
     </div>
-    <!-- /#page-wrapper -->
+    <!-- /.row -->
+  </div>
+  <!-- /#page-wrapper -->
 </div>
