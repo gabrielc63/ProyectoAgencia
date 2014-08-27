@@ -1,0 +1,19 @@
+<% provide(:title, "Listado Subagencias") %>
+<div id="wrapper">
+  <%= render 'agencias/navigation' %>
+  <div id="page-wrapper">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="page-header">Subagencia</h1>
+          <p>Titular:
+            <%= @subagencia.titular %></p>
+          <p>Domicilio:
+            <%= @subagencia.domicilio %></p>
+          <%= link_to 'Ad', new_subagencia_juego_impreso_path( [@subagencia, @juego_impreso]) %>
+      </div>
+      <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /#page-wrapper -->
+</div>

@@ -1,6 +1,6 @@
 class AgenciasController < ApplicationController
   def home
-
+    @agencia = current_agencia
   end
 
   def new

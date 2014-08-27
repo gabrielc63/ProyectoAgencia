@@ -29,17 +29,17 @@ RSpec.describe Subagencia, :type => :model do
     it { should_not be_valid }
   end
 
-  describe "when email is not present" do
+  describe "when numero subagencia is not present" do
     before { @sub_agencia.numero_subagencia = " " }
     it { should_not be_valid }
   end
 
-  describe "when email is not present" do
+  describe "when domicilio is not present" do
     before { @sub_agencia.domicilio = " " }
     it { should_not be_valid }
   end
 
-  describe "when email is not present" do
+  describe "when telefono is not present" do
     before { @sub_agencia.telefono = " " }
     it { should_not be_valid }
   end

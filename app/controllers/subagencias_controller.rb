@@ -3,6 +3,10 @@ class SubagenciasController < ApplicationController
     @subagencias = current_agencia.subagencias
   end
 
+  def listado
+    @subagencias = current_agencia.subagencias
+  end
+
   def new
     @subagencia = current_agencia.subagencias.build
   end
@@ -15,6 +19,11 @@ class SubagenciasController < ApplicationController
     else
       render 'new'
     end
+  end
+
+  def show
+    @subagencia = Subagencia.find(params[:id])
+    @juego_impreso = @subagencia.juegos_impreso.build
   end
 
   private

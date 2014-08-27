@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140702194629) do
+ActiveRecord::Schema.define(version: 20140723003458) do
 
   create_table "agencias", force: true do |t|
     t.integer  "numero_agencia"
@@ -22,6 +22,19 @@ ActiveRecord::Schema.define(version: 20140702194629) do
     t.string   "email"
     t.string   "password_digest"
     t.string   "remember_token"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "juegos_impreso", force: true do |t|
+    t.date     "fecha"
+    t.integer  "quiniela"
+    t.integer  "quini_ex"
+    t.integer  "loteria_online"
+    t.integer  "otros_juegos"
+    t.integer  "otros_gastos"
+    t.decimal  "premios"
+    t.integer  "subagencia_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

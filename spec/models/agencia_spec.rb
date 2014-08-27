@@ -8,9 +8,7 @@ describe Agencia do
 
   # let(:agencia) { FactoryGirl.create(:agencia) }
   before do
-    @agencia = Agencia.new(password: "mentira", password_confirmation: "mentira", titular: "Juan perez",
-                           numero_agencia: "65", email: "juan@gmail", domicilio: "Espania 676",
-                           telefono: "345522", localidad: "Goya")
+    @agencia = Agencia.new(password: "mentira", password_confirmation: "mentira", titular:                     "Juan perez", numero_agencia: "65", email: "juan@gmail",                     domicilio: "Espania 676", telefono: "345522", localidad: "Goya"                     )
   end
 
   subject { @agencia }

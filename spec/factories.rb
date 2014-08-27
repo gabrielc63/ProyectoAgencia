@@ -9,4 +9,12 @@ FactoryGirl.define do
     telefono "356677"
     localidad "Goya"
   end
+
+  factory :subagencia do
+    titular "Javier Mascherano"
+    numero_subagencia "14"
+    email "javiermascherano@gmail.com"
+    domicilio "Barcelona 2367"
+    telefono "543312"
+  end
 end
