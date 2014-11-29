@@ -22,7 +22,7 @@ RSpec.describe "AuthenticationPages", :type => :request do
         it { should have_selector('div.alert.alert-danger') }
 
         describe "despues de visitar otra pagina" do
-          before { click_link "Inicio" }
+          before { click_link "Registrarse" }
           it { should_not have_selector('div.alert.alert-danger') }
         end
       end
