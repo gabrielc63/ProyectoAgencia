@@ -1,4 +1,5 @@
 class SubagenciasController < ApplicationController
+  before_action :signed_in_agencia
   before_action :set_subagencia, only: [:show, :edit, :update, :destroy]
 
   def index
