@@ -6,7 +6,9 @@
             <p class="centered"><a href="profile.html">
             <%= image_tag "ui-sam.jpg", class: "img-circle", width: "60" %>
             </a></p>
-            <h5 class="centered"> <%= current_agencia.titular %> </h5>
+            <% if current_agencia %>
+              <h5 class="centered"> <%= current_agencia.titular %> </h5>
+            <% end %>
 
             <li class="mt">
                 <%= link_to listado_path do %>
@@ -40,12 +42,12 @@
                     </li>
                 </ul>
             </li>
-            <li class="sub-menu">
+            <!-- <li class="sub-menu">
                 <a class="" href="javascript:;" >
                     <i class="fa fa-book"></i>
                     <span>Comision por venta</span>
                 </a>
-            </li>
+            </li> -->
             <li class="sub-menu">
                 <%= link_to current_agencia do %>
                     <i class="fa fa-gear fa-fw"></i>

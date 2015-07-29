@@ -26,12 +26,68 @@
                   </thead>
 
                   <tbody>
+                    <% fecha = @impresos.first.fecha %>
+                    <% comision_quiniela = 0 %>
+                    <% comision_quiniela_desc = 0 %>
+                    <% comision_express = 0 %>
+                    <% comision_express_desc = 0 %>
+                    <% comision_loteria = 0 %>
+                    <% comision_loteria_desc = 0 %>
+                    <% comision_juegos = 0 %>
+                    <% comision_juegos_desc = 0 %>
+
                     <% @impresos.each do |impreso| %>
+
+                      <% if fecha != impreso.fecha  %>
+                        <tr class="info">
+                          <td>total neto</td>
+                          <td><%= comision_quiniela %></td>
+                          <td><%= comision_express %></td>
+                          <td><%= comision_loteria %></td>
+                          <td><%= comision_juegos %></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr class="info">
+                          <td>con descuento</td>
+                          <td><%= comision_quiniela_desc %></td>
+                          <td><%= comision_express_desc %></td>
+                          <td><%= comision_loteria_desc %></td>
+                          <td><%= comision_juegos_desc %></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+
+                        <% comision_quiniela = 0 %>
+                        <% fecha = impreso.fecha %>
+                      <% end %>
+
                       <% total_quiniela = impreso.quiniela - (impreso.quiniela * 15 /  100) %>
                       <% total_express = impreso.quini_ex - (impreso.quini_ex * 8 /  100) %>
                       <% total_loteria = impreso.loteria_online - (impreso.loteria_online * 16 /  100) %>
                       <% total_juegos = impreso.otros_juegos - (impreso.otros_juegos * 10 /  100) %>
                       <% total = (total_quiniela + total_express + total_loteria + total_juegos + impreso.otros_gastos) - impreso.premios %>
+
+                      <% comision_quiniela += impreso.quiniela %>
+                      <% comision_express += impreso.quini_ex %>
+                      <% comision_loteria += impreso.loteria_online %>
+                      <% comision_juegos += impreso.otros_juegos %>
+
+                      <% comision_quiniela_desc += total_quiniela %>
+                      <% comision_express_desc += total_express %>
+                      <% comision_loteria_desc += total_loteria %>
+                      <% comision_juegos_desc += total_juegos %>
+
+
+
                       <tr>
                         <td><%= impreso.fecha %></td>
                         <td><%= impreso.quiniela %></td>
@@ -45,7 +101,34 @@
                         <td><%= link_to 'Ver', [impreso.subagencia, impreso] %></td>
                         <td><%= link_to 'Eliminar', [impreso.subagencia, impreso], method: :delete, data: { confirm: 'Are you sure?' } %></td>
                       </tr>
+
                     <% end %>
+                    <tr class="info">
+                      <td>total neto</td>
+                      <td><%= comision_quiniela %></td>
+                      <td><%= comision_express %></td>
+                      <td><%= comision_loteria %></td>
+                      <td><%= comision_juegos %></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr class="info">
+                      <td>con descuento</td>
+                      <td><%= comision_quiniela_desc %></td>
+                      <td><%= comision_express_desc %></td>
+                      <td><%= comision_loteria_desc %></td>
+                      <td><%= comision_juegos_desc %></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
                   </tbody>
                 </table>
               </section>

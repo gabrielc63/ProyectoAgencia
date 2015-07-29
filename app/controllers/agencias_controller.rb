@@ -1,4 +1,6 @@
 class AgenciasController < ApplicationController
+  layout 'static_pages', only: [:new, :edit, :index]
+
   def home
     @agencia = current_agencia
   end
@@ -12,7 +14,7 @@ class AgenciasController < ApplicationController
     if @agencia.save
       sign_in @agencia
       flash[:success] = "Bienvenido"
-      redirect_to @agencia
+      redirect_to home_url
     else
       render 'new'
     end

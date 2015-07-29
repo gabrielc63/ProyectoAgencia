@@ -4,6 +4,7 @@ class Agencia < ActiveRecord::Base
 
   validates :email, presence: true
   validates :titular, presence: true
+  validates :telefono, presence: true
 
   def Agencia.new_remember_token
     SecureRandom.urlsafe_base64

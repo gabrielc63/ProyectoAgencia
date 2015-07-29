@@ -1,53 +1,57 @@
 <% provide(:title, 'Registro') %>
 
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-  <h1>Registrarse</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <br>
+      <br>
+    <h1>Registrarse</h1>
 
-    <%= form_for @agencia, :url => agencias_path do |f| %>
-      <%= render 'shared/error_messages', object: f.object %>
+      <%= form_for @agencia, :url => agencias_path do |f| %>
+        <%= render 'shared/error_messages', object: f.object %>
 
-      <div class="form-group">
-        <%= f.label :titular %>
-        <%= f.text_field :titular, class: "form-control" %>
-      </div>
+        <div class="form-group">
+          <%= f.label :titular %>
+          <%= f.text_field :titular, class: "form-control" %>
+        </div>
 
-      <div class="form-group">
-        <%= f.label :numero_agencia %>
-        <%= f.text_field :numero_agencia, class: "form-control" %>
-      </div>
+        <div class="form-group">
+          <%= f.label :numero_agencia %>
+          <%= f.text_field :numero_agencia, class: "form-control" %>
+        </div>
 
-      <div class="form-group">
-      <%= f.label :email %>
-      <%= f.text_field :email, class: "form-control" %>
-      </div>
+        <div class="form-group">
+        <%= f.label :email %>
+        <%= f.text_field :email, class: "form-control" %>
+        </div>
 
-      <div class="form-group">
-        <%= f.label :telefono %>
-        <%= f.text_field :telefono, class: "form-control" %>
-      </div>
+        <div class="form-group">
+          <%= f.label :telefono %>
+          <%= f.text_field :telefono, class: "form-control" %>
+        </div>
 
-      <div class="form-group">
-        <%= f.label :domicilio %>
-        <%= f.text_field :domicilio, class: "form-control" %>
-      </div>
+        <div class="form-group">
+          <%= f.label :domicilio %>
+          <%= f.text_field :domicilio, class: "form-control" %>
+        </div>
 
-      <div class="form-group">
-        <%= f.label :localidad %>
-        <%= f.text_field :localidad, class: "form-control" %>
-      </div>
+        <div class="form-group">
+          <%= f.label :localidad %>
+          <%= f.text_field :localidad, class: "form-control" %>
+        </div>
 
-      <div class="form-group">
-        <%= f.label :password %>
-        <%= f.password_field :password, class: "form-control" %>
-      </div>
+        <div class="form-group">
+          <%= f.label :password %>
+          <%= f.password_field :password, class: "form-control" %>
+        </div>
 
-      <div class="form-group">
-        <%= f.label :password_confirmation, "Password Confirmation" %>
-        <%= f.password_field :password_confirmation, class: "form-control" %>
-      </div>
+        <div class="form-group">
+          <%= f.label :password_confirmation, "Password Confirmation" %>
+          <%= f.password_field :password_confirmation, class: "form-control" %>
+        </div>
 
-      <%= f.submit "Crear mi cuenta", class: "btn btn-default btn-lg btn-primary" %>
-    <% end %>
+        <%= f.submit "Crear mi cuenta", class: "btn btn-default btn-lg btn-primary" %>
+      <% end %>
+    </div>
   </div>
 </div>

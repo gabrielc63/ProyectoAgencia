@@ -5,7 +5,7 @@ class ImpresosController < ApplicationController
   # GET /impresos.json
   def index
     @subagencia = Subagencia.find(params[:subagencia_id])
-    @impresos = @subagencia.impresos.all
+    @impresos = @subagencia.impresos.order(:fecha)
   end
 
   # GET /impresos/1
