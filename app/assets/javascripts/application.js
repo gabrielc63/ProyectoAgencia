@@ -18,3 +18,11 @@
 //= require jquery.nicescroll
 //= require common-scripts
 //= require jquery.sparkline
+
+$(document).ready(function () {
+  setTimeout(function () {
+    $('.alert-info').fadeOut("slow", function () {
+      $(this).remove();
+    })
+  }, 4500);
+});

@@ -12,14 +12,14 @@
   <body>
 
     <section id="container">
+      <%= render partial: "shared/flash_messages", flash: flash %>
       <%= render partial: "shared/navigation" %>
       <%= render partial: "shared/aside" %>
-      <%= render partial: "shared/flash_messages", flash: flash %>
       <%= yield %>
 
       <footer class="site-footer">
         <div class="text-center">
-            2015 - Lo pibes
+            2015 - Para seminario de integracion
             <a href="#" class="go-top">
                 <i class="fa fa-angle-up"></i>
             </a>

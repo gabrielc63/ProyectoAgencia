@@ -8,6 +8,7 @@ class SessionsController < ApplicationController
     agencia = Agencia.find_by(email: params[:email].downcase)
     if agencia && agencia.authenticate(params[:password])
       sign_in agencia
+      flash[:notice] = 'Ha iniciado sesion'
       return_point(agencia)
     else
       flash.now[:error] = 'Combinacion invalida de email/password'
