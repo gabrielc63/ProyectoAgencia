@@ -1,14 +1,14 @@
 source 'https://rubygems.org'
-ruby '2.1.4'
+ruby '2.2.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.8'
+gem 'rails', '4.1.9'
 
 gem 'sqlite3'
 
 gem 'sass-rails'
 
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', '3.2.0.2'
 
 gem "font-awesome-rails"
 
@@ -25,13 +25,10 @@ gem 'jbuilder'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc',          group: :doc
 
-# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
-
 # Use ActiveModel has_secure_password
 gem 'bcrypt'
 
-gem 'zapata', groups: %w(development test)
+# gem 'zapata', groups: %w(development test)
 
 # Use unicorn as the app server
 # gem 'unicorn'
@@ -39,19 +36,25 @@ gem 'zapata', groups: %w(development test)
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-# Use debugger
-# gem 'debugger', group: [:development, :test]
-
 group :development, :test do
   gem 'guard'
   gem 'guard-livereload'
   gem 'guard-rspec'
   gem 'rspec-rails'
-  gem 'rspec-its'
   gem 'shoulda-matchers'
-  # gem 'jazz_hands'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'pry'
+  gem 'pry-byebug'
+  gem 'pry-rails'
+  gem 'awesome_print'
+  gem 'hirb'
+end
+
+group :development do
+  gem 'spring'
+  gem 'quiet_assets'
+  gem 'bullet'
 end
 
 group :test do

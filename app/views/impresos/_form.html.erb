@@ -1,0 +1,54 @@
+<div class="form-panel">
+  <%= form_for [@impreso.subagencia, @impreso] do |f| %>
+  <%#= render 'shared/error_messages', object: f.object %>
+  <%#= f.hidden_field :subagencia_id , :value=>params[:subagencia_id] %>
+  <% if @impreso.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@impreso.errors.count, "error") %> prohibited this impreso from being saved:</h2>
+
+      <ul>
+      <% @impreso.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <div class="form-group">
+      <%= f.label :fecha %><br>
+      <%= f.date_select :fecha %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :quiniela %>
+      <%= f.number_field :quiniela, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :quini_express %>
+      <%= f.number_field :quini_ex, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :loteria_online %>
+      <%= f.number_field :loteria_online, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :otros_juegos %>
+      <%= f.number_field :otros_juegos, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :otros_gastos %>
+      <%= f.number_field :otros_gastos, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :premios %>
+      <%= f.text_field :premios, class: "form-control" %>
+    </div>
+
+    <%= f.submit "Guardar", class: "btn btn-default btn-lg btn-primary" %>
+  <% end %>
+</div>

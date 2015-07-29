@@ -19,7 +19,8 @@ class AgenciasController < ApplicationController
   end
 
   def show
-    @agencia = Agencia.find(params[:id])
+    # @agencia = Agencia.find(params[:id])
+    @agencia = current_agencia
   end
 
   def edit

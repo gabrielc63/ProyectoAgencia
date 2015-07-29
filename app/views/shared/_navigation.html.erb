@@ -1,0 +1,165 @@
+
+                <!--
+                    <li>
+                        <%#= link_to  current_agencia do %>
+                            <i class="fa fa-user fa-fw"></i> Cuenta
+                        <%# end %>
+                    </li>
+                    <li>
+                        <%#= link_to  edit_agencia_path(current_agencia) do %>
+                            <i class="fa fa-gear fa-fw"></i> Configuracion
+                        <%# end %>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <%#= link_to  logout_path, method: "delete" do %>
+                            <i class="fa fa-sign-out fa-fw"></i> Salir
+                        <%# end %>
+                    </li>
+                </ul>
+
+            </li>
+
+        <div class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li class="sidebar-search">
+                        <div class="input-group custom-search-form">
+                            <input type="text" class="form-control" placeholder="Buscar Subagencia">
+                            <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="<%#= listado_path %>"><i class="fa fa-bar-chart-o fa-fw"></i>
+                         Contabilidad diaria </a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa fa-edit fa-fw"></i>
+                        Juegos Preimpresos<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#">De Agencia</a>
+                            </li>
+                            <li>
+                                <a href="#">De Subagencias</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa fa-sitemap fa-fw"></i>
+                         Subagencias<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <%#= link_to "Listado", subagencias_path %>
+                            </li>
+                            <li>
+                                <%#= link_to "Agregar", new_subagencia_path %>
+                            </li>
+                            <li>
+                                <a href="#">Modificar</a>
+                            </li>
+
+                    <li>
+                        <a href="#"><i class="fa fa-table fa-fw"></i>
+                         Comision por venta</a>
+                    </li>
+                </ul> -->
+            <!-- /#side-menu -->
+            <!-- </div> -->
+            <!-- /.sidebar-collapse -->
+
+<header class="header black-bg">
+        <div class="sidebar-toggle-box">
+            <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+        </div>
+      <!--logo start-->
+      <%= link_to home_path, class: "logo" do %>
+        <b>Proyecto Agencia</b>
+      <% end %>
+      <!--logo end-->
+      <div class="nav notify-row" id="top_menu">
+          <!--  notification start -->
+          <ul class="nav top-menu">
+              <!-- settings start -->
+
+              <!-- settings end -->
+              <!-- inbox dropdown start-->
+              <!-- <li id="header_inbox_bar" class="dropdown">
+                  <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+                      <i class="fa fa-envelope-o"></i>
+                      <span class="badge bg-theme">5</span>
+                  </a>
+                  <ul class="dropdown-menu extended inbox">
+                      <div class="notify-arrow notify-arrow-green"></div>
+                      <li>
+                          <p class="green">You have 5 new messages</p>
+                      </li>
+                      <li>
+                          <a href="index.html#">
+                              <span class="photo"><img alt="avatar" src="assets/img/ui-zac.jpg"></span>
+                              <span class="subject">
+                              <span class="from">Zac Snider</span>
+                              <span class="time">Just now</span>
+                              </span>
+                              <span class="message">
+                                  Hi mate, how is everything?
+                              </span>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="index.html#">
+                              <span class="photo"><img alt="avatar" src="assets/img/ui-divya.jpg"></span>
+                              <span class="subject">
+                              <span class="from">Divya Manian</span>
+                              <span class="time">40 mins.</span>
+                              </span>
+                              <span class="message">
+                               Hi, I need your help with this.
+                              </span>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="index.html#">
+                              <span class="photo"><img alt="avatar" src="assets/img/ui-danro.jpg"></span>
+                              <span class="subject">
+                              <span class="from">Dan Rogers</span>
+                              <span class="time">2 hrs.</span>
+                              </span>
+                              <span class="message">
+                                  Love your new Dashboard.
+                              </span>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="index.html#">
+                              <span class="photo"><img alt="avatar" src="assets/img/ui-sherman.jpg"></span>
+                              <span class="subject">
+                              <span class="from">Dj Sherman</span>
+                              <span class="time">4 hrs.</span>
+                              </span>
+                              <span class="message">
+                                  Please, answer asap.
+                              </span>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="index.html#">See all messages</a>
+                      </li>
+                  </ul>
+              </li> -->
+              <!-- inbox dropdown end -->
+          </ul>
+          <!--  notification end -->
+      </div>
+      <div class="top-menu">
+        <ul class="nav pull-right top-menu">
+          <li>
+            <%= link_to "logout", logout_path, class: "logout", method: "delete" %>
+          </li>
+        </ul>
+      </div>
+  </header>

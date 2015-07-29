@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ProyectoAgencia | <%= yield(:title) %></title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/bootstrap.metismenu/1.1.0/css/metismenu.min.css"> -->
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <%= render partial: "shared/flash_messages", flash: flash %>
+    <%= yield %>
+  </body>
+</html>

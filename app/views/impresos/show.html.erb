@@ -1,0 +1,51 @@
+<section id="main-content">
+  <section class="wrapper site-min-height">
+    <div class="row">
+      <div class="col-lg-12">
+
+        <p>
+          <strong>Fecha:</strong>
+          <%= @impreso.fecha %>
+        </p>
+
+        <p>
+          <strong>Quiniela:</strong>
+          <%= @impreso.quiniela %>
+        </p>
+
+        <p>
+          <strong>Quini ex:</strong>
+          <%= @impreso.quini_ex %>
+        </p>
+
+        <p>
+          <strong>Loteria online:</strong>
+          <%= @impreso.loteria_online %>
+        </p>
+
+        <p>
+          <strong>Otros juegos:</strong>
+          <%= @impreso.otros_juegos %>
+        </p>
+
+        <p>
+          <strong>Otros gastos:</strong>
+          <%= @impreso.otros_gastos %>
+        </p>
+
+        <p>
+          <strong>Premios:</strong>
+          <%= @impreso.premios %>
+        </p>
+
+        <p>
+          <strong>Subagencia:</strong>
+          <%= @impreso.subagencia.numero_subagencia %>
+        </p>
+
+        <%= link_to 'Edit', edit_subagencia_impreso_path(@impreso.subagencia, @impreso) %> |
+
+      </div>
+    </div>
+  </section>
+</section>

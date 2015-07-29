@@ -1,0 +1,60 @@
+<aside>
+    <div id="sidebar"  class="nav-collapse ">
+        <!-- sidebar menu start-->
+        <ul class="sidebar-menu" id="nav-accordion">
+
+            <p class="centered"><a href="profile.html">
+            <%= image_tag "ui-sam.jpg", class: "img-circle", width: "60" %>
+            </a></p>
+            <h5 class="centered"> <%= current_agencia.titular %> </h5>
+
+            <li class="mt">
+                <%= link_to listado_path do %>
+                    <i class="fa fa-bar-chart-o"></i>
+                    <span>Contabilidad Diaria</span>
+                <% end %>
+            </li>
+
+            <li class="sub-menu">
+                <a href="" >
+                    <i class="fa fa-desktop"></i>
+                    <span>Juegos Preimpresos</span>
+                </a>
+                <ul class="sub">
+                    <li><a href="">De agencia</a></li>
+                    <li><a href="">De subagencia</a></li>
+                </ul>
+            </li>
+
+            <li class="sub-menu">
+                <a href="" >
+                    <i class="fa fa-cogs"></i>
+                    <span>Subagencias</span>
+                </a>
+                <ul class="sub">
+                    <li>
+                      <%= link_to "Listado", subagencias_path %>
+                    </li>
+                    <li>
+                      <%= link_to "Agregar", new_subagencia_path %>
+                    </li>
+                </ul>
+            </li>
+            <li class="sub-menu">
+                <a class="" href="javascript:;" >
+                    <i class="fa fa-book"></i>
+                    <span>Comision por venta</span>
+                </a>
+            </li>
+            <li class="sub-menu">
+                <%= link_to current_agencia do %>
+                    <i class="fa fa-gear fa-fw"></i>
+                    <span>Cuenta de usuario</span>
+                <% end %>
+            </li>
+
+        </ul>
+        <!-- sidebar menu end-->
+    </div>
+</aside>
+<!--sidebar end-->

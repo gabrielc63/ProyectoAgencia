@@ -1,19 +1,23 @@
 <% provide(:title, "Listado Subagencias") %>
-<div id="wrapper">
-  <%= render 'agencias/navigation' %>
-  <div id="page-wrapper">
-    <div class="row">
-      <div class="col-lg-12">
-        <h1 class="page-header">Subagencia</h1>
-          <p>Titular:
-            <%= @subagencia.titular %></p>
-          <p>Domicilio:
-            <%= @subagencia.domicilio %></p>
-          <%= link_to 'Ad', new_subagencia_juego_impreso_path( [@subagencia, @juego_impreso]) %>
+
+  <section id="main-content">
+    <section class="wrapper site-min-height">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="page-header">Subagencia <%= @subagencia.numero_subagencia %></h1>
+            <p>Titular:
+              <%= @subagencia.titular %></p>
+            <p>Domicilio:
+              <%= @subagencia.domicilio %></p>
+            <p>Teléfono:
+              <%= @subagencia.telefono %></p>
+            <p>Email:
+              <%= @subagencia.email %></p>
+
+            <%= link_to 'Agregar juego impreso', new_subagencia_impreso_path([@subagencia, @impreso]) %>
+            <br/>
+            <%= link_to 'Listado juegos impresos', subagencia_impresos_path(@subagencia) %>
+        </div>
       </div>
-      <!-- /.col-lg-12 -->
-    </div>
-    <!-- /.row -->
-  </div>
-  <!-- /#page-wrapper -->
-</div>
+    </section>
+  </section>

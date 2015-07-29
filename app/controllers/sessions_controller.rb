@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  layout "static_pages"
+
   def new
   end
 
@@ -8,7 +10,7 @@ class SessionsController < ApplicationController
       sign_in agencia
       return_point(agencia)
     else
-      flash.now[:error] = 'Invalida combinacion de email/password'
+      flash.now[:error] = 'Combinacion invalida de email/password'
       render 'new'
     end
   end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140723003458) do
+ActiveRecord::Schema.define(version: 20150520160619) do
 
   create_table "agencias", force: true do |t|
     t.integer  "numero_agencia"
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20140723003458) do
     t.datetime "updated_at"
   end
 
-  create_table "juegos_impreso", force: true do |t|
+  create_table "impresos", force: true do |t|
     t.date     "fecha"
     t.integer  "quiniela"
     t.integer  "quini_ex"
@@ -38,6 +38,8 @@ ActiveRecord::Schema.define(version: 20140723003458) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "impresos", ["subagencia_id"], name: "index_impresos_on_subagencia_id"
 
   create_table "subagencias", force: true do |t|
     t.integer  "numero_subagencia"

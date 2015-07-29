@@ -1,6 +1,6 @@
-class CreateJuegosImpreso < ActiveRecord::Migration
+class CreateImpresos < ActiveRecord::Migration
   def change
-    create_table :juegos_impreso do |t|
+    create_table :impresos do |t|
       t.date :fecha
       t.integer :quiniela
       t.integer :quini_ex
@@ -8,7 +8,7 @@ class CreateJuegosImpreso < ActiveRecord::Migration
       t.integer :otros_juegos
       t.integer :otros_gastos
       t.decimal :premios
-      t.integer :subagencia_id
+      t.references :subagencia, index: true
 
       t.timestamps
     end

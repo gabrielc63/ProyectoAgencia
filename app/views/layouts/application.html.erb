@@ -1,15 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ProyectoAgencia |
-      <%= yield(:title) %></title>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/bootstrap.metismenu/1.1.0/css/metismenu.min.css">
+    <title>ProyectoAgencia | <%= yield(:title) %></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => false %>
+    <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/bootstrap.metismenu/1.1.0/css/metismenu.min.css"> -->
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <%= render partial: "shared/flash_messages", flash: flash %>
-    <%= yield %>
+
+    <section id="container">
+      <%= render partial: "shared/navigation" %>
+      <%= render partial: "shared/aside" %>
+      <%= render partial: "shared/flash_messages", flash: flash %>
+      <%= yield %>
+
+      <footer class="site-footer">
+        <div class="text-center">
+            2015 - Lo pibes
+            <a href="#" class="go-top">
+                <i class="fa fa-angle-up"></i>
+            </a>
+        </div>
+      </footer>
+    </section>
+
   </body>
 </html>

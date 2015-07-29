@@ -12,6 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
-// require turbolinks
-//= require bootstrap-sprockets
-//= require_tree .
+//= require bootstrap.min
+//= require jquery.scrollTo.min
+//= require jquery.dcjqaccordion.2.7
+//= require jquery.nicescroll
+//= require common-scripts
+//= require jquery.sparkline

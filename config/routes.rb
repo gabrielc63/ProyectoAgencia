@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :subagencias do
+    resources :impresos
+  end
+
   resources :agencias
   # resources :subagencias
   resources :subagencias do
@@ -11,6 +15,6 @@ Rails.application.routes.draw do
   match '/home', to: 'agencias#home', via: 'get'
   match '/login', to: 'sessions#new', via: 'get'
   match '/logout', to: 'sessions#destroy', via: 'delete'
-  match '/listado', to: 'subagencias#listado', via: 'get'
+  match '/listado', to: 'subagencias#index', via: 'get'
 
 end

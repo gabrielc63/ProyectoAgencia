@@ -1,6 +1,7 @@
 class Subagencia < ActiveRecord::Base
   belongs_to :agencia
   has_many :juegos_impreso
+  has_many :impresos
 
   validates :numero_subagencia, presence: true
   validates :email, presence: true
