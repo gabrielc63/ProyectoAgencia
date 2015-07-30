@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :preimpresos
+
   resources :subagencias do
     resources :impresos
   end

@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fecha sorteo:</strong>
+  <%= @preimpreso.fecha_sorteo %>
+</p>
+
+<p>
+  <strong>Fecha inicio:</strong>
+  <%= @preimpreso.fecha_inicio %>
+</p>
+
+<p>
+  <strong>Numero sorteo:</strong>
+  <%= @preimpreso.numero_sorteo %>
+</p>
+
+<p>
+  <strong>Precio:</strong>
+  <%= @preimpreso.precio %>
+</p>
+
+<p>
+  <strong>Cantidad:</strong>
+  <%= @preimpreso.cantidad %>
+</p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @preimpreso.tipo %>
+</p>
+
+<p>
+  <strong>Devolucion:</strong>
+  <%= @preimpreso.devolucion %>
+</p>
+
+<p>
+  <strong>Agencia:</strong>
+  <%= @preimpreso.agencia %>
+</p>
+
+<%= link_to 'Edit', edit_preimpreso_path(@preimpreso) %> |
+<%= link_to 'Back', preimpresos_path %>

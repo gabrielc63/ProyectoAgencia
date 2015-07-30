@@ -1,0 +1,49 @@
+<div class="form-panel">
+  <%= form_for(@preimpreso) do |f| %>
+    <% if @preimpreso.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@preimpreso.errors.count, "error") %> prohibited this preimpreso from being saved:</h2>
+
+        <ul>
+        <% @preimpreso.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :fecha_sorteo %><br>
+      <%= f.date_select :fecha_sorteo %>
+    </div>
+    <div class="field">
+      <%= f.label :fecha_inicio %><br>
+      <%= f.date_select :fecha_inicio %>
+    </div>
+    <div class="field">
+      <%= f.label :numero_sorteo %><br>
+      <%= f.number_field :numero_sorteo %>
+    </div>
+    <div class="field">
+      <%= f.label :precio %><br>
+      <%= f.text_field :precio %>
+    </div>
+    <div class="field">
+      <%= f.label :cantidad %><br>
+      <%= f.number_field :cantidad %>
+    </div>
+    <div class="field">
+      <%= f.select :tipo, Preimpreso.tipos.keys.to_a %>
+
+
+    </div>
+    <div class="field">
+      <%= f.label :devolucion %><br>
+      <%= f.number_field :devolucion %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>
+</div>

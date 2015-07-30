@@ -1,6 +1,7 @@
 class Agencia < ActiveRecord::Base
   has_secure_password
   has_many :subagencias, dependent: :destroy
+  has_many :preimpresos, dependent: :destroy
 
   validates :email, presence: true
   validates :titular, presence: true

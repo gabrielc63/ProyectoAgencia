@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150520160619) do
+ActiveRecord::Schema.define(version: 20150729223931) do
 
   create_table "agencias", force: true do |t|
     t.integer  "numero_agencia"
@@ -40,6 +40,22 @@ ActiveRecord::Schema.define(version: 20150520160619) do
   end
 
   add_index "impresos", ["subagencia_id"], name: "index_impresos_on_subagencia_id"
+
+  create_table "preimpresos", force: true do |t|
+    t.date     "fecha_sorteo"
+    t.date     "fecha_inicio"
+    t.integer  "numero_sorteo"
+    t.float    "precio"
+    t.integer  "cantidad"
+    t.integer  "tipo"
+    t.integer  "devolucion"
+    t.integer  "agencia_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "preimpresos", ["agencia_id"], name: "index_preimpresos_on_agencia_id"
+  add_index "preimpresos", ["tipo"], name: "index_preimpresos_on_tipo"
 
   create_table "subagencias", force: true do |t|
     t.integer  "numero_subagencia"
